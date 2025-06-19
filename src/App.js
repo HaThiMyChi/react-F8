@@ -1,6 +1,7 @@
 import React, { useState, useReducer, useRef, useContext } from 'react';
 import { StoreContext } from './store';
 import { useStore, actions } from './store';
+import Heading from './components/Heading';
 
 export default function App() {
   const [state, dispatch] = useStore();
@@ -24,6 +25,8 @@ export default function App() {
       {todos.map((todo, index) => (
         <li key={index}>{todo}</li>
       ))}
+
+      <Heading />
     </div>
   );
 }
